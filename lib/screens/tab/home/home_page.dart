@@ -77,9 +77,6 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 8),
           TopMusic(),
           SizedBox(height: 16),
-          CustomTitle(title: 'Only Hits'),
-          OnlyHits(),
-          SizedBox(height: 16),
           CustomTitle(title: 'Recently played'),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -124,11 +121,11 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 16,
-          ),
+          SizedBox(height: 16),
+          CustomTitle(title: 'Only Hits'),
+          OnlyHits(),
+          SizedBox(height: 16),
           CustomTitle(title: 'Best of Artists'),
-          SizedBox(height: 8),
           Artist(),
         ],
       ),
@@ -180,23 +177,23 @@ class RowAlbumCard extends StatelessWidget {
   }
 }
 
-  Widget getAppBar() {
-    return AppBar(
-      backgroundColor: black,
-      elevation: 0,
-      title: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Explore",
-              style: TextStyle(
-                  fontSize: 20, color: white, fontWeight: FontWeight.bold),
-            ),
-            Icon(Icons.list)
-          ],
-        ),
+Widget getAppBar() {
+  return AppBar(
+    backgroundColor: black,
+    elevation: 0,
+    title: Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Explore",
+            style: TextStyle(
+                fontSize: 20, color: white, fontWeight: FontWeight.bold),
+          ),
+          Icon(Icons.list)
+        ],
       ),
-    );
-  }
+    ),
+  );
+}

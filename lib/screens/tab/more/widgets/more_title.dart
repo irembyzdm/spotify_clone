@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/screens/tab/more/profile_page.dart';
+import 'package:spotify_clone/screens/tab/more/settings_page.dart';
 
 class MoreTitle extends StatelessWidget {
   const MoreTitle({super.key, required this.title});
@@ -29,7 +29,7 @@ class MoreTitle extends StatelessWidget {
         ),
         IconButton(
             onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProfileView())),
+                MaterialPageRoute(builder: (context) => SettingsView())),
             icon: const Icon(
               Icons.person_sharp,
               color: Colors.white,

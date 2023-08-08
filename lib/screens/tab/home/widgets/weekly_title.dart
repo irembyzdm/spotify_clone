@@ -17,14 +17,14 @@ class WeeklyTitle extends StatelessWidget {
         ),
         RichText(
           text: TextSpan(
-              text: 'Weekly ',
+              text: 'Discover ',
               style: TextStyle(
                   color: ColorConstants.primaryColor,
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
               children: const [
                 TextSpan(
-                  text: ' Music',
+                  text: ' Weekly',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,

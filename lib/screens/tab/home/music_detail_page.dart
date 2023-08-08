@@ -1,9 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-//import 'package:flutter/services.dart';
 import 'package:spotify_clone/constants/colors.dart';
-import 'package:spotify_clone/data/data.dart';
 
 class MusicDetailPage extends StatefulWidget {
   final String songName;
@@ -26,11 +24,16 @@ class MusicDetailPage extends StatefulWidget {
 }
 
 class _MusicDetailPageState extends State<MusicDetailPage> {
+  final GlobalKey<_MusicDetailPageState> _musicDetailPageKey =
+      GlobalKey<_MusicDetailPageState>();
   double _currentSliderValue = 20;
   bool isPlaying = true;
   bool isShuffleOn = false;
   bool isRepeatOn = false;
   int currentSongIndex = 0;
+  String currentSongName = '';
+  String currentArtistName = '';
+  String currentArtistArt = '';
 
   AudioPlayer audioPlayer = AudioPlayer();
   AudioCache audioCache = AudioCache();
@@ -55,6 +58,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     String fullSongUrl = "songs/$songUrl";
     audioCache.load(fullSongUrl);
     audioPlayer.play(AssetSource(fullSongUrl));
+    updateSongInfo();
   }
 
   void _playPauseSong() {
@@ -68,49 +72,56 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     });
   }
 
-void _playNextSong() {
-  setState(() {
-    if (isShuffleOn) {
-      currentSongIndex = Random().nextInt(songs.length);
-    } else {
-      currentSongIndex = (currentSongIndex + 1) % songs.length;
-    }
+  void updateSongInfo() {
+    setState(() {
+      currentSongName = widget.songs[currentSongIndex]['songName'];
+      currentArtistName = widget.songs[currentSongIndex]['artistName'];
+      currentArtistArt = widget.songs[currentSongIndex]['artistArt'];
+    });
+  }
 
-    String songUrl = songs[currentSongIndex]['songUrl'];
-    if (songUrl.isEmpty) {
-      // Şarkı URL'i null veya boş ise mesaj göster
-      print('Şarkı URL bulunamadı.');
-      return;
-    }
-
-    _playSong(songUrl);
-    isPlaying = true;
-  });
-}
-
-void _playPreviousSong() {
-  setState(() {
-    if (isShuffleOn) {
-      currentSongIndex = Random().nextInt(songs.length);
-    } else {
-      currentSongIndex = (currentSongIndex - 1) % songs.length;
-      if (currentSongIndex < 0) {
-        currentSongIndex = songs.length - 1;
+  void _playNextSong() {
+    setState(() {
+      if (isShuffleOn) {
+        currentSongIndex = Random().nextInt(widget.songs.length);
+      } else {
+        currentSongIndex = (currentSongIndex + 1) % widget.songs.length;
       }
-    }
 
-    String songUrl = songs[currentSongIndex]['songUrl'];
-    if (songUrl.isEmpty) {
-      // Şarkı URL'i null veya boş ise mesaj göster
-      print('Şarkı URL bulunamadı.');
-      return;
-    }
+      String songUrl = widget.songs[currentSongIndex]['songUrl'];
+      if (songUrl.isEmpty) {
+        print('Şarkı URL bulunamadı.');
+        return;
+      }
 
-    _playSong(songUrl);
-    isPlaying = true;
-  });
-}
+      _playSong(songUrl);
+      isPlaying = true;
+      updateSongInfo();
+    });
+  }
 
+  void _playPreviousSong() {
+    setState(() {
+      if (isShuffleOn) {
+        currentSongIndex = Random().nextInt(widget.songs.length);
+      } else {
+        currentSongIndex = (currentSongIndex - 1) % widget.songs.length;
+        if (currentSongIndex < 0) {
+          currentSongIndex = widget.songs.length - 1;
+        }
+      }
+
+      String songUrl = widget.songs[currentSongIndex]['songUrl'];
+      if (songUrl.isEmpty) {
+        print('Şarkı URL bulunamadı.');
+        return;
+      }
+
+      _playSong(songUrl);
+      isPlaying = true;
+      updateSongInfo();
+    });
+  }
 
   void _toggleShuffle() {
     setState(() {

@@ -72,15 +72,6 @@ List<Map<String, dynamic>> artists = [
   }
 ];
 
-List<String> searchList = [
-  'Post Malone',
-  'Drake',
-  'Justin Bieber',
-  'The Weeknd',
-  '90s Mix',
-  'Türkçe Pop',
-  'Rihanna'
-];
 
 final List<Map<String, dynamic>> podCast = [
   {
@@ -174,43 +165,141 @@ List<Map<String, dynamic>> songs = [
         'songName': 'Numaracı',
         'artistName': 'Mabel Matiz',
         'artistArt': 'assets/images/song1.jpeg',
-        'songUrl': 'assets/songs/numaraci.mp3',
+        'songUrl': 'numaraci.mp3',
       },
       {
         'songName': 'Görmem Böylesini',
         'artistName': 'Sefo, Simge',
         'artistArt': 'assets/images/song2.jpeg',
-        'songUrl': 'assets/songs/gormem-boylesini.mp3',
+        'songUrl': 'gormem-boylesini.mp3',
       },
       {
         'songName': 'Mesele Belli',
         'artistName': 'Melek Mosso',
         'artistArt': 'assets/images/song3.jpeg',
-        'songUrl': 'assets/songs/mesele-belli.mp3',
+        'songUrl': 'mesele-belli.mp3',
       },
       {
         'songName': 'Manolya',
         'artistName': 'Kurtuluş Kuş',
         'artistArt': 'assets/images/song4.jpeg',
-        'songUrl': 'assets/songs/manolya.mp3',
+        'songUrl': 'manolya.mp3',
       },
       {
         'songName': 'Bitter',
         'artistName': 'İrem Derici',
         'artistArt': 'assets/images/song5.jpeg',
-        'songUrl': 'assets/songs/bitter.mp3'
+        'songUrl': 'bitter.mp3'
       },
       {
         'songName': 'Diva Yorgun - ||',
         'artistName': 'Melike Şahin',
         'artistArt': 'assets/images/song6.jpeg',
-        'songUrl': 'assets/songs/bitter.mp3',
+        'songUrl': 'sakiler.mp3',
       },
       {
         'songName': 'Sürgün Aşkımız',
         'artistName': 'Sakiler',
         'artistArt': 'assets/images/song7.jpeg',
-        'songUrl': 'assets/songs/sakiler.mp3',
+        'songUrl': 'sakiler.mp3',
+      },
+    ]
+  },
+  {
+    'albumName': 'Üçüncü Yeniler',
+    'artistName': 'Türk müziğinde yeni akımlar.',
+    'albumArt': 'assets/images/ucuncuyeni.jpeg',
+    'songs': [
+      {
+        'songName': 'Antidepresan',
+        'artistName': 'Mert Demir, Mabel Matiz',
+        'artistArt': 'assets/images/song1.jpeg',
+        'songUrl': 'numaraci.mp3',
+      },
+      {
+        'songName': 'Tutun Sen Bana',
+        'artistName': 'Yüzyüzeyken Konuşuruz',
+        'artistArt': 'assets/images/song2.jpeg',
+        'songUrl': 'gormem-boylesini.mp3',
+      },
+      {
+        'songName': 'Bahçemizin Halinden Baharımı Kıyasla',
+        'artistName': 'Bağzıları',
+        'artistArt': 'assets/images/song3.jpeg',
+        'songUrl': 'mesele-belli.mp3',
+      },
+      {
+        'songName': 'Bi Tek Ben Anlarım',
+        'artistName': 'KÖFN',
+        'artistArt': 'assets/images/song4.jpeg',
+        'songUrl': 'manolya.mp3',
+      },
+      {
+        'songName': 'Ağla Şimdi Sonsuza Kadar',
+        'artistName': 'Can Bonomo',
+        'artistArt': 'assets/images/song5.jpeg',
+        'songUrl': 'bitter.mp3'
+      },
+      {
+        'songName': 'Olabilirdik',
+        'artistName': 'Dolu Kadehi Ters Tut, Selin',
+        'artistArt': 'assets/images/song6.jpeg',
+        'songUrl': 'bitter.mp3',
+      },
+      {
+        'songName': 'Hep De Yorgun',
+        'artistName': 'Yaşlı Amca',
+        'artistArt': 'assets/images/song7.jpeg',
+        'songUrl': 'sakiler.mp3',
+      },
+    ]
+  },
+  {
+    'albumName': 'AUSTIN',
+    'artistName': 'Post Malone',
+    'albumArt': 'assets/images/austin.jpeg',
+    'songs': [
+      {
+        'songName': 'Dont Understand',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song1.jpeg',
+        'songUrl': 'numaraci.mp3',
+      },
+      {
+        'songName': 'Something Real',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song2.jpeg',
+        'songUrl': 'gormem-boylesini.mp3',
+      },
+      {
+        'songName': 'Chemical',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song3.jpeg',
+        'songUrl': 'mesele-belli.mp3',
+      },
+      {
+        'songName': 'Novacandy',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song4.jpeg',
+        'songUrl': 'manolya.mp3',
+      },
+      {
+        'songName': 'Mourning',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song5.jpeg',
+        'songUrl': 'bitter.mp3'
+      },
+      {
+        'songName': 'Too Cool To Die',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song6.jpeg',
+        'songUrl': 'bitter.mp3',
+      },
+      {
+        'songName': 'Sign Me Up',
+        'artistName': 'Post Malone',
+        'artistArt': 'assets/images/song7.jpeg',
+        'songUrl': 'sakiler.mp3',
       },
     ]
   }
