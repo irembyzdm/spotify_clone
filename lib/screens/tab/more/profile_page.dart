@@ -311,7 +311,7 @@ class _ProfileViewState extends State<ProfileView> {
                       width: 74,
                       height: 22,
                       child: Text(
-                        'Shazam',
+                        'Favorites',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,

@@ -72,7 +72,6 @@ List<Map<String, dynamic>> artists = [
   }
 ];
 
-
 final List<Map<String, dynamic>> podCast = [
   {
     "title": "İlk Sayfası",
@@ -213,44 +212,44 @@ List<Map<String, dynamic>> songs = [
       {
         'songName': 'Antidepresan',
         'artistName': 'Mert Demir, Mabel Matiz',
-        'artistArt': 'assets/images/song1.jpeg',
-        'songUrl': 'numaraci.mp3',
+        'artistArt': 'assets/images/antidepresan.jpeg',
+        'songUrl': 'anti.mp3',
       },
       {
         'songName': 'Tutun Sen Bana',
         'artistName': 'Yüzyüzeyken Konuşuruz',
-        'artistArt': 'assets/images/song2.jpeg',
-        'songUrl': 'gormem-boylesini.mp3',
+        'artistArt': 'assets/images/yuzyuze.jpeg',
+        'songUrl': 'tutun.mp3',
       },
       {
         'songName': 'Bahçemizin Halinden Baharımı Kıyasla',
         'artistName': 'Bağzıları',
-        'artistArt': 'assets/images/song3.jpeg',
-        'songUrl': 'mesele-belli.mp3',
+        'artistArt': 'assets/images/bahcemizin.jpeg',
+        'songUrl': 'bazilari.mp3',
       },
       {
         'songName': 'Bi Tek Ben Anlarım',
         'artistName': 'KÖFN',
-        'artistArt': 'assets/images/song4.jpeg',
-        'songUrl': 'manolya.mp3',
+        'artistArt': 'assets/images/kofn.jpeg',
+        'songUrl': 'bitek.mp3',
       },
       {
         'songName': 'Ağla Şimdi Sonsuza Kadar',
         'artistName': 'Can Bonomo',
-        'artistArt': 'assets/images/song5.jpeg',
-        'songUrl': 'bitter.mp3'
+        'artistArt': 'assets/images/canbonomo.jpeg',
+        'songUrl': 'can.mp3'
       },
       {
         'songName': 'Olabilirdik',
         'artistName': 'Dolu Kadehi Ters Tut, Selin',
-        'artistArt': 'assets/images/song6.jpeg',
-        'songUrl': 'bitter.mp3',
+        'artistArt': 'assets/images/dktt.jpeg',
+        'songUrl': 'olabilirdik.mp3',
       },
       {
         'songName': 'Hep De Yorgun',
         'artistName': 'Yaşlı Amca',
-        'artistArt': 'assets/images/song7.jpeg',
-        'songUrl': 'sakiler.mp3',
+        'artistArt': 'assets/images/hepdeyorgun.jpeg',
+        'songUrl': 'yorgun.mp3',
       },
     ]
   },
@@ -262,43 +261,141 @@ List<Map<String, dynamic>> songs = [
       {
         'songName': 'Dont Understand',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song1.jpeg',
-        'songUrl': 'numaraci.mp3',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'dontun.mp3',
       },
       {
         'songName': 'Something Real',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song2.jpeg',
-        'songUrl': 'gormem-boylesini.mp3',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'real.mp3',
       },
       {
         'songName': 'Chemical',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song3.jpeg',
-        'songUrl': 'mesele-belli.mp3',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'chemical.mp3',
       },
       {
         'songName': 'Novacandy',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song4.jpeg',
-        'songUrl': 'manolya.mp3',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'nova.mp3',
       },
       {
         'songName': 'Mourning',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song5.jpeg',
-        'songUrl': 'bitter.mp3'
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'mourning.mp3'
       },
       {
         'songName': 'Too Cool To Die',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song6.jpeg',
-        'songUrl': 'bitter.mp3',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'toocool.mp3',
       },
       {
         'songName': 'Sign Me Up',
         'artistName': 'Post Malone',
-        'artistArt': 'assets/images/song7.jpeg',
+        'artistArt': 'assets/images/austin.jpeg',
+        'songUrl': 'sign.mp3',
+      },
+    ]
+  },
+  {
+    'albumName': 'evermore',
+    'artistName': 'Taylor Swift',
+    'albumArt': 'assets/images/tswi.jpeg',
+    'songs': [
+      {
+        'songName': 'willow',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'numaraci.mp3',
+      },
+      {
+        'songName': 'champagne problems',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'gormem-boylesini.mp3',
+      },
+      {
+        'songName': 'gold rush',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'mesele-belli.mp3',
+      },
+      {
+        'songName': "'tis the damn season",
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'manolya.mp3',
+      },
+      {
+        'songName': 'tolerate it',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'bitter.mp3'
+      },
+      {
+        'songName': 'no body, no crime (feat. HAIM)',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'bitter.mp3',
+      },
+      {
+        'songName': 'happiness',
+        'artistName': 'Taylor Swift',
+        'artistArt': 'assets/images/tswi.jpeg',
+        'songUrl': 'sakiler.mp3',
+      },
+    ]
+  },
+  {
+    'albumName': 'big on the internet',
+    'artistName': 'iykyk',
+    'albumArt': 'assets/images/boti.jpeg',
+    'songs': [
+      {
+        'songName': 'TELEKINESIS',
+        'artistName': 'Travis Scoot, SZA, Future',
+        'artistArt': 'assets/images/telekinesis.jpeg',
+        'songUrl': 'numaraci.mp3',
+      },
+      {
+        'songName': 'Can You Remember the Rain',
+        'artistName': 'Garrett Atterberry',
+        'artistArt': 'assets/images/cyrtr.jpeg',
+        'songUrl': 'gormem-boylesini.mp3',
+      },
+      {
+        'songName': 'I Know You',
+        'artistName': 'Faye Webster',
+        'artistArt': 'assets/images/faye.jpeg',
+        'songUrl': 'mesele-belli.mp3',
+      },
+      {
+        'songName': 'Wasted Summers',
+        'artistName': 'juju',
+        'artistArt': 'assets/images/juju.jpeg',
+        'songUrl': 'manolya.mp3',
+      },
+      {
+        'songName': 'Christmas Kids',
+        'artistName': 'Roar',
+        'artistArt': 'assets/images/roas.jpeg',
+        'songUrl': 'bitter.mp3'
+      },
+      {
+        'songName': 'Smooth Operator',
+        'artistName': 'Sade',
+        'artistArt': 'assets/images/smooth.jpeg',
+        'songUrl': 'bitter.mp3',
+      },
+      {
+        'songName': 'Makeba',
+        'artistName': 'Jain',
+        'artistArt': 'assets/images/makeba.jpeg',
         'songUrl': 'sakiler.mp3',
       },
     ]

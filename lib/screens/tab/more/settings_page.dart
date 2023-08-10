@@ -9,8 +9,7 @@ class SettingsView extends StatefulWidget {
 class _SettingsViewState extends State<SettingsView> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Container(
+    return Container(
       width: 428,
       height: 926,
       clipBehavior: Clip.antiAlias,
@@ -31,13 +30,13 @@ class _SettingsViewState extends State<SettingsView> {
             top: 56,
             child: SizedBox(
               width: 152,
-              height: 20,
+              height: 90,
               child: Text(
                 'Settings',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 16,
+                  fontSize: 24,
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.w700,
                   decoration: TextDecoration.none,
@@ -50,7 +49,7 @@ class _SettingsViewState extends State<SettingsView> {
             top: 134,
             child: SizedBox(
               width: 56,
-              height: 20,
+              height: 17,
               child: Text(
                 'Elif ',
                 textAlign: TextAlign.start,
@@ -60,43 +59,6 @@ class _SettingsViewState extends State<SettingsView> {
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.w700,
                   decoration: TextDecoration.none,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 31,
-            top: 60,
-            child: Container(
-              width: 16,
-              height: 16,
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [],
-              ),
-            ),
-          ),
-          Positioned(
-            left: 396.14,
-            top: 168,
-            child: Transform(
-              transform: Matrix4.identity()
-                ..translate(0.0, 0.0)
-                ..rotateZ(3.13),
-              child: Container(
-                width: 16,
-                height: 16,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [],
                 ),
               ),
             ),
@@ -129,32 +91,37 @@ class _SettingsViewState extends State<SettingsView> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.transparent, // Arkaplan rengi şeffaf
-                padding: EdgeInsets.zero, // Kenar boşluğu sıfır
+                primary: Color.fromARGB(0, 151, 19, 19),
+                padding: EdgeInsets.zero,
               ),
               child: SizedBox(
                 width: 100,
-                height: 17,
-                child: Text(
-                  'View Profile',
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 13,
-                    fontFamily: 'Gotham',
-                    fontWeight: FontWeight.w600,
-                    decoration: TextDecoration.none,
+                height: 30,
+                child: Center(
+                  child: Text(
+                    'View Profile',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontFamily: 'Gotham',
+                      fontWeight: FontWeight.w600,
+                      decoration: TextDecoration.none,
+                    ),
                   ),
                 ),
               ),
             ),
           ),
+          SizedBox(
+            height: 16,
+          ),
           Positioned(
             left: 29,
-            top: 255,
+            top: 260,
             child: SizedBox(
               width: 251,
-              height: 511,
+              height: 340,
               child: Text(
                 'Account\n\nData Saver\n\nLanguages\n\nPlayback\n\nExplicit Content\n\nDevices\n\nCar\n\nSocial\n\nVoice Assistant & Apps\n\nAudio Quality\n\nStorage\n\n\n',
                 style: TextStyle(
@@ -211,26 +178,6 @@ class _SettingsViewState extends State<SettingsView> {
                     ),
                   ),
                   const SizedBox(height: 34),
-                  Transform(
-                    transform: Matrix4.identity()
-                      ..translate(0.0, 0.0)
-                      ..rotateZ(3.13),
-                    child: Expanded(
-                      child: Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 3.27, vertical: 0.40),
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [],
-                        ),
-                      ),
-                    ),
-                  ),
                   const SizedBox(height: 34),
                   Transform(
                     transform: Matrix4.identity()
@@ -286,83 +233,12 @@ class _SettingsViewState extends State<SettingsView> {
                     ),
                   ),
                   const SizedBox(height: 34),
-                  Transform(
-                    transform: Matrix4.identity()
-                      ..translate(0.0, 0.0)
-                      ..rotateZ(3.13),
-                    child: Container(
-                      width: 16,
-                      height: 16,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 34),
-                  Transform(
-                    transform: Matrix4.identity()
-                      ..translate(0.0, 0.0)
-                      ..rotateZ(3.13),
-                    child: Container(
-                      width: 16,
-                      height: 16,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 34),
-                  Transform(
-                    transform: Matrix4.identity()
-                      ..translate(0.0, 0.0)
-                      ..rotateZ(3.13),
-                    child: Container(
-                      width: 16,
-                      height: 16,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 34),
-                  Transform(
-                    transform: Matrix4.identity()
-                      ..translate(0.0, 0.0)
-                      ..rotateZ(3.13),
-                    child: Container(
-                      width: 16,
-                      height: 16,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [],
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),
           ),
         ],
       ),
-    ));
+    );
   }
 }

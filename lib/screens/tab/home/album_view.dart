@@ -4,12 +4,12 @@ import 'package:spotify_clone/screens/tab/home/music_detail_page.dart';
 
 class AlbumView extends StatelessWidget {
   final ImageProvider image;
-  final Map<String, dynamic> song;
+  final Map<String, dynamic> songs;
 
   const AlbumView({
     super.key,
     required this.image,
-    required this.song,
+    required this.songs,
   });
 
   @override
@@ -27,7 +27,7 @@ class AlbumView extends StatelessWidget {
           },
         ),
         title: Text(
-          song['albumName'],
+          songs['albumName'],
           style: TextStyle(color: ColorConstants.starterWhite),
         ),
         elevation: 0,
@@ -59,19 +59,19 @@ class AlbumView extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                song['albumName'],
+                songs['albumName'],
                 style: TextStyle(
                   color: ColorConstants.starterWhite,
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 8),
               Text(
-                song['artistName'],
+                songs['artistName'],
                 style: TextStyle(
                   color: ColorConstants.starterWhite.withOpacity(0.6),
-                  fontSize: 18,
+                  fontSize: 15,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -87,9 +87,9 @@ class AlbumView extends StatelessWidget {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: song['songs'].length,
+                itemCount: songs['songs'].length,
                 itemBuilder: (context, index) {
-                  final songData = song['songs'][index];
+                  final songData = songs['songs'][index];
                   return ListTile(
                     leading: CircleAvatar(
                       backgroundImage: AssetImage(songData['artistArt']),
@@ -102,6 +102,7 @@ class AlbumView extends StatelessWidget {
                       songData['artistName'],
                       style: TextStyle(
                         color: ColorConstants.starterWhite.withOpacity(0.6),
+                        fontSize: 15,
                       ),
                     ),
                     trailing: Icon(
@@ -116,7 +117,7 @@ class AlbumView extends StatelessWidget {
                             songName: songData['songName'],
                             artistName: songData['artistName'],
                             artistArt: songData['artistArt'],
-                            songs: song['songs'],
+                            songs: songs['songs'],
                             songUrl: songData['songUrl'],
                           ),
                         ),

@@ -7,13 +7,13 @@ class AlbumCard extends StatelessWidget {
   final String label;
   final Function onTap;
   final double size;
-  final Map<String, dynamic> song;
+  final Map<String, dynamic> songs;
   const AlbumCard({
     Key? key,
     required this.image,
     required this.label,
     required this.onTap,
-    required this.song,
+    required this.songs,
     this.size = 120,
   }) : super(key: key);
 
@@ -26,7 +26,7 @@ class AlbumCard extends StatelessWidget {
           MaterialPageRoute(
             builder: (context) => AlbumView(
               image: image,
-              song: song,
+              songs: songs,
             ),
           ),
         );

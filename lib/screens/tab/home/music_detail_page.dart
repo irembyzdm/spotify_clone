@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:spotify_clone/constants/colors.dart';
+//import 'package:spotify_clone/data/data.dart';
 
 class MusicDetailPage extends StatefulWidget {
   final String songName;
@@ -24,8 +25,6 @@ class MusicDetailPage extends StatefulWidget {
 }
 
 class _MusicDetailPageState extends State<MusicDetailPage> {
-  final GlobalKey<_MusicDetailPageState> _musicDetailPageKey =
-      GlobalKey<_MusicDetailPageState>();
   double _currentSliderValue = 20;
   bool isPlaying = true;
   bool isShuffleOn = false;
@@ -72,14 +71,6 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     });
   }
 
-  void updateSongInfo() {
-    setState(() {
-      currentSongName = widget.songs[currentSongIndex]['songName'];
-      currentArtistName = widget.songs[currentSongIndex]['artistName'];
-      currentArtistArt = widget.songs[currentSongIndex]['artistArt'];
-    });
-  }
-
   void _playNextSong() {
     setState(() {
       if (isShuffleOn) {
@@ -123,6 +114,14 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     });
   }
 
+  void updateSongInfo() {
+    setState(() {
+      currentSongName = widget.songs[currentSongIndex]['songName'];
+      currentArtistName = widget.songs[currentSongIndex]['artistName'];
+      currentArtistArt = widget.songs[currentSongIndex]['artistArt'];
+    });
+  }
+
   void _toggleShuffle() {
     setState(() {
       isShuffleOn = !isShuffleOn;
@@ -160,7 +159,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                     },
                   ),
                 ])),
-            const SizedBox(height: 30), // Üstteki boşluğu ayarlamak için
+            const SizedBox(height: 30),
             Stack(
               alignment: Alignment.center,
               children: [
@@ -288,7 +287,10 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                       color: Colors.white.withOpacity(0.8),
                       size: 25,
                     ),
-                    onPressed: _playPreviousSong,
+                    onPressed: () {
+                      updateSongInfo();
+                      _playPreviousSong();
+                    },
                   ),
                   IconButton(
                     iconSize: 50,
@@ -313,7 +315,10 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                       color: Colors.white.withOpacity(0.8),
                       size: 25,
                     ),
-                    onPressed: _playNextSong,
+                    onPressed: () {
+                      updateSongInfo();
+                      _playNextSong();
+                    },
                   ),
                   IconButton(
                     icon: Icon(
